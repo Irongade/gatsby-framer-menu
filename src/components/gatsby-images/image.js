@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -18,30 +18,22 @@ export const Image = ({ src }) => {
     query {
       shoe1: file(relativePath: { eq: "shoe1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       shoe2: file(relativePath: { eq: "shoe2.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       shoe3: file(relativePath: { eq: "shoe3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       shoe4: file(relativePath: { eq: "shoe4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
     }
@@ -50,13 +42,13 @@ export const Image = ({ src }) => {
   return (
     <>
       {src === 1 ? (
-        <Img fluid={data.shoe1.childImageSharp.fluid} />
+        <GatsbyImage  image={data.shoe1.childImageSharp.gatsbyImageData} />
       ) : src === 2 ? (
-        <Img fluid={data.shoe2.childImageSharp.fluid} />
+        <GatsbyImage  image={data.shoe2.childImageSharp.gatsbyImageData} />
       ) : src === 3 ? (
-        <Img fluid={data.shoe3.childImageSharp.fluid} />
+        <GatsbyImage  image={data.shoe3.childImageSharp.gatsbyImageData} />
       ) : (
-        <Img fluid={data.shoe4.childImageSharp.fluid} />
+        <GatsbyImage  image={data.shoe4.childImageSharp.gatsbyImageData} />
       )}
     </>
   )
