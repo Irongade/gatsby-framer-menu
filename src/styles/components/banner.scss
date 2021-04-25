@@ -10,9 +10,13 @@
     .main-headline {
       font-weight: 400;
       line-height: 10rem;
-      font-size: 8rem;
+      font-size: 4rem;
       color: #fff;
       mix-blend-mode: difference;
+      -webkit-mix-blend-mode: difference;
+      -moz-mix-blend-mode: difference;
+      -o-mix-blend-mode: difference;
+      -ms-mix-blend-mode: difference;
       width: 100%;
       position: absolute;
       z-index: 1;
@@ -39,7 +43,7 @@
       margin: 0 auto;
 
       @media (max-width: 1440px) {
-        width: 800px;
+        width: 700px;
       }
 
       img {

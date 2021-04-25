@@ -18,22 +18,22 @@ export const Image = ({ src }) => {
     query {
       shoe1: file(relativePath: { eq: "shoe1.jpg" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       shoe2: file(relativePath: { eq: "shoe2.jpg" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       shoe3: file(relativePath: { eq: "shoe3.jpg" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
       shoe4: file(relativePath: { eq: "shoe4.jpg" }) {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
