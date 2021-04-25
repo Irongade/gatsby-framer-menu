@@ -10,7 +10,7 @@
     .main-headline {
       font-weight: 400;
       line-height: 10rem;
-      font-size: 12rem;
+      font-size: 8rem;
       color: #fff;
       mix-blend-mode: difference;
       width: 100%;
@@ -20,6 +20,7 @@
       text-align: center;
       top: 50%;
       transform: translateY(-50%);
+
       span.semi-bold {
         font-weight: 400;
         &:hover {
@@ -36,6 +37,10 @@
     .image {
       width: 1000px;
       margin: 0 auto;
+
+      @media (max-width: 1440px) {
+        width: 800px;
+      }
 
       img {
         width: 100%;

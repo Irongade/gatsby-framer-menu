@@ -1,8 +1,8 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import React from "react"
 import { Link } from "gatsby"
 
-const Header = () => {
+const Header = ({setMenuState, location}) => {
+
   return (
     <header>
       <div className="container fluid">
@@ -10,7 +10,7 @@ const Header = () => {
           <Link activeClassName="active" to="/">
             Pocket.
           </Link>
-          <div className="hamburger-menu">
+          <div className="hamburger-menu" onClick={() => setMenuState(true)}>
             <span></span>
             <span></span>
           </div>

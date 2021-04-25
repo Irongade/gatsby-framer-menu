@@ -4,7 +4,7 @@ import {Image} from "../components/gatsby-images/image"
 const Product = ({pageContext}) => {
     const product = pageContext
     return (
-        <div className="banner">
+        <div className="banner" style={{zIndex: 1}}>
             <div className="inner-banner">
                 <div className="container fluid">
                     <h1 className="main-headline">

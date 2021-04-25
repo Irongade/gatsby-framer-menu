@@ -42,13 +42,13 @@ export const Image = ({ src }) => {
   return (
     <>
       {src === 1 ? (
-        <GatsbyImage  image={data.shoe1.childImageSharp.gatsbyImageData} />
+        <GatsbyImage  image={data.shoe1.childImageSharp.gatsbyImageData} alt="src" />
       ) : src === 2 ? (
-        <GatsbyImage  image={data.shoe2.childImageSharp.gatsbyImageData} />
+        <GatsbyImage  image={data.shoe2.childImageSharp.gatsbyImageData} alt="src" />
       ) : src === 3 ? (
-        <GatsbyImage  image={data.shoe3.childImageSharp.gatsbyImageData} />
+        <GatsbyImage  image={data.shoe3.childImageSharp.gatsbyImageData} alt="src" />
       ) : (
-        <GatsbyImage  image={data.shoe4.childImageSharp.gatsbyImageData} />
+        <GatsbyImage  image={data.shoe4.childImageSharp.gatsbyImageData} alt="src" />
       )}
     </>
   )
