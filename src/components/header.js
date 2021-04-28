@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const Header = ({setMenuState, location}) => {
+const Header = ({setMenuState, location, setCursorHovered}) => {
 
   return (
     <header>
@@ -10,7 +10,7 @@ const Header = ({setMenuState, location}) => {
           <Link activeClassName="active" to="/">
             Pocket.
           </Link>
-          <div className="hamburger-menu" onClick={() => setMenuState(true)}>
+          <div className="hamburger-menu" onClick={() => setMenuState(true)} onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
             <span></span>
             <span></span>
           </div>
